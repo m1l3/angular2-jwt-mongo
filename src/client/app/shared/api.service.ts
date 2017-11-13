@@ -50,7 +50,10 @@ export class ApiService {
     const request = new Request(requestOptions);
 
     return this.http.request(request)
-    .map((res: Response) => res.json())
+    .map((res: Response) => {
+      console.log(res.json());
+      return res.json();
+    })
     .catch((res: Response) => this.onRequestError(res));
   }
 

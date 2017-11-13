@@ -34,10 +34,10 @@ export class AddContactComponent implements OnInit {
     const headers = new Headers();
 
     this.api.post('contacts', contact)
-    .subscribe(data => {
-      form.reset();
-      this.loading = false;
-      this.newContact = data;
-    })
+      .subscribe(data => {
+        form.reset();
+        this.loading = false;
+        this.newContact = data;
+      })
   }
 }
